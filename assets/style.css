@@ -102,7 +102,7 @@ body {
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #b5ab56;
+	background-color: #4c4823;
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
@@ -146,7 +146,14 @@ body {
 .quote__text {
 	font-family: Spectral;
 	font-style: italic;
-	font-weight: 300;
+	/*font-weight: 300;*/
+	font-size: 2em; /* ou 2rem, ou la taille exacte comme 32px */
+	font-weight: bold; /* les h1 sont en gras par défaut */
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	line-height: normal;
 
 }
 .quote__author {

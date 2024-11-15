@@ -54,7 +54,8 @@
   };
 
   $.fn.mauGallery.listeners = function(options) {
-    $('.gallery-item').on('click', function() {
+    // On utilise la délégation d'événements pour s'assurer que ça fonctionne sur les éléments dynamiques
+    $(document).on('click', '.gallery-item', function() {
       if (options.lightBox && $(this).prop('tagName') === 'IMG') {
         $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
       }
@@ -76,6 +77,7 @@
   };
 
   $.fn.mauGallery.methods = {
+
     createRowWrapper(element) {
       if (!element.children().first().hasClass("row")) {
         element.append('<div class="gallery-items-row row"></div>');
@@ -123,10 +125,13 @@
     },
 
     openLightBox(element, lightboxId) {
-      $(`#${lightboxId || 'galleryLightbox'}`)
-          .find(".lightboxImage")
-          .attr("src", element.attr("src"));
-      $(`#${lightboxId || 'galleryLightbox'}`).modal("show");
+      const modalId = lightboxId || 'galleryLightbox';
+      const modal = $(`#${modalId}`);
+      modal.find(".lightboxImage").attr("src", element.attr("src"));
+
+      // Utiliser Bootstrap 5 Modal
+      const bsModal = new bootstrap.Modal(modal);
+      bsModal.show();
     },
 
     prevImage() {
