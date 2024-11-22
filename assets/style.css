@@ -69,7 +69,10 @@ body {
 
 .picture img {
 	width: 100%;
-
+	&.cover{
+		object-fit: cover;
+		object-position: center center;
+	}
 }
 #about-me {
 	flex: 2
@@ -362,3 +365,22 @@ input[type="submit"] {
 	}
 }
 
+
+
+.social-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000; /* Couleur par défaut des icônes */
+	transition: color 0.3s ease;
+}
+
+.social-link:hover {
+	color: #525252; /* Couleur au survol */
+}
+
+.nav ul {
+	display: flex;
+	align-items: center;
+	gap: 1rem; /* Espacement entre les éléments */
+}
