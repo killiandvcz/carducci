@@ -93,9 +93,7 @@ body {
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
+
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -150,9 +148,9 @@ body {
 .quote__text {
 	font-family: Spectral;
 	font-style: italic;
-	/*font-weight: 300;*/
-	font-size: 2em; /* ou 2rem, ou la taille exacte comme 32px */
-	font-weight: bold; /* les h1 sont en gras par défaut */
+
+	font-size: 2em;
+	font-weight: bold;
 	margin-top: 0.67em;
 	margin-bottom: 0.67em;
 	margin-left: 0;
@@ -371,16 +369,16 @@ input[type="submit"] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #000; /* Couleur par défaut des icônes */
+	color: #000;
 	transition: color 0.3s ease;
 }
 
 .social-link:hover {
-	color: #525252; /* Couleur au survol */
+	color: #525252;
 }
 
 .nav ul {
 	display: flex;
 	align-items: center;
-	gap: 1rem; /* Espacement entre les éléments */
+	gap: 1rem;
 }

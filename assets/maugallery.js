@@ -54,7 +54,7 @@
   };
 
   $.fn.mauGallery.listeners = function(options) {
-    // On utilise la délégation d'événements pour s'assurer que ça fonctionne sur les éléments dynamiques
+
     $(document).on('click', '.gallery-item', function() {
       if (options.lightBox && $(this).prop('tagName') === 'IMG') {
         $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
@@ -129,7 +129,7 @@
       const modal = $(`#${modalId}`);
       modal.find(".lightboxImage").attr("src", element.attr("src"));
 
-      // Utiliser Bootstrap 5 Modal
+
       const bsModal = new bootstrap.Modal(modal);
       bsModal.show();
     },
